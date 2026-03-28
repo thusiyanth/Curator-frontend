@@ -1,0 +1,122 @@
+/* ===== ORDER HISTORY PAGE ===== */
+.history-page {
+  min-height: 100vh;
+  background: var(--surface);
+}
+
+.history-content {
+  padding: 0 var(--space-6);
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Track Section */
+.track-section {
+  text-align: center;
+  padding: var(--space-8);
+}
+.track-section h2 {
+  font-size: 1.5rem;
+  margin-bottom: var(--space-2);
+  background: var(--primary-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.track-input-group {
+  display: flex;
+  gap: var(--space-3);
+  margin-top: var(--space-4);
+}
+.track-input-group .input-field {
+  flex: 1;
+  text-align: center;
+  font-size: 1.125rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  padding: var(--space-4);
+  background: var(--surface-container);
+  border-radius: var(--radius-lg);
+}
+.track-input-group .input-field:focus {
+  box-shadow: 0 0 0 2px rgba(145, 76, 0, 0.2);
+  background: var(--surface-container-lowest);
+}
+.track-input-group .btn-primary {
+  padding: var(--space-4) var(--space-6);
+  white-space: nowrap;
+}
+
+/* Info Section */
+.info-section {
+  margin-top: var(--space-8);
+  padding: 0 var(--space-2);
+}
+.info-section h3 {
+  font-size: 1rem;
+  color: var(--on-surface);
+  margin-bottom: var(--space-6);
+  text-align: center;
+}
+
+.info-steps {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+}
+
+.info-step {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-4);
+}
+
+.info-num {
+  width: 36px;
+  height: 36px;
+  min-width: 36px;
+  border-radius: var(--radius-lg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 0.875rem;
+  background: var(--primary-light);
+  color: var(--primary);
+  font-family: var(--font-display);
+}
+
+.info-step p {
+  font-size: 0.9375rem;
+  color: var(--on-surface-variant);
+  line-height: 1.5;
+  padding-top: var(--space-2);
+}
+
+/* ===== DESKTOP LAYOUT ===== */
+@media (min-width: 768px) {
+  .track-section { padding: var(--space-12) var(--space-8); }
+  .track-section h2 { font-size: 2rem; }
+  .info-steps {
+    flex-direction: row;
+    gap: var(--space-8);
+  }
+  .info-step {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    flex: 1;
+  }
+}
+
+@media (min-width: 1024px) {
+  .history-content { max-width: 900px; }
+}
+
+@media (max-width: 480px) {
+  .history-content { padding: 0 var(--space-4); }
+  .track-section { padding: var(--space-6); }
+  .track-input-group { flex-direction: column; }
+  .track-input-group .btn-primary { width: 100%; }
+}
